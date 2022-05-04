@@ -1,0 +1,62 @@
+[
+    {
+        "seller": "Guitar Co.",
+        "palletQty": 93,
+        "price": 14272.43,
+        "material": "HDPE",
+        "dimension": "48\" X 40\"",
+        "address": "fakeblvd 34, Tultitlan",
+        "state": "Estado de México",
+        "image": ""
+    },
+    {
+        "seller": "Beer Co.",
+        "palletQty": 78,
+        "price": 11970.43,
+        "material": "HDPE",
+        "dimension": "48\" X 40\"",
+        "address": "fakestreet 83, Cuautitlan",
+        "state": "Estado de México",
+        "image": ""
+    },
+    {
+        "seller": "Guitar Co.",
+        "palletQty": 108,
+        "price": 21229.78,
+        "material": "HDPE",
+        "dimension": "48\" X 48\"",
+        "address": "fakeavenue 26, El Marquez",
+        "state": "Querétaro",
+        "image": ""
+    },
+    {
+        "seller": "Beer Co.",
+        "palletQty": 64,
+        "price": 12580.61,
+        "material": "PP",
+        "dimension": "48\" X 48\"",
+        "address": "fakedrive 46, Calamanda",
+        "state": "Querétaro",
+        "image": ""
+    },
+    {
+        "seller": "Guitar Co.",
+        "palletQty": 59,
+        "price": 9725.91,
+        "material": "PP",
+        "dimension": "48\" X 40\"",
+        "address": "fakeroad 82, Azcapotzalco",
+        "state": "CDMX",
+        "image": ""
+    },
+    {
+        "seller": "Beer Co.",
+        "palletQty": 120,
+        "price": 18416.04,
+        "material": "HDPE",
+        "dimension": "48\" X 40\"",
+        "address": "fakedrive 14, Salinas Victoria",
+        "state": "Nuevo León",
+        "image": ""
+    }
+]
