@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
 const offerSchema = new Schema({
-    publisher: {
+    seller: {
         type: String,
         required: true,
         trim: true,

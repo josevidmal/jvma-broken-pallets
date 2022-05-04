@@ -45,7 +45,7 @@ const resolvers = {
         addOffer: async (parent, { palletQty, price, material, dimension, address, state, image }, context) => {
             if (context.user) {
                 const offer = await Offer.create({
-                    publisher: context.user.username,
+                    seller: context.user.username,
                     palletQty, 
                     price, 
                     material, 
