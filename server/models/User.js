@@ -13,7 +13,7 @@ const userSchema = new Schema(
             type: String,
             required: true,
         },
-        Company: {
+        company: {
             type: String,
             required: false,
         },
@@ -29,6 +29,10 @@ const userSchema = new Schema(
             match: [/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/, 'Must use a valid email address'],
         },
         password: {
+            type: String,
+            required: true,
+        },
+        userType: {
             type: String,
             required: true,
         },
