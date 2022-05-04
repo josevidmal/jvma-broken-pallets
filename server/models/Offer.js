@@ -2,6 +2,11 @@ const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
 const offerSchema = new Schema({
+    publisher: {
+        type: String,
+        required: true,
+        trim: true,
+    },
     palletQty: {
         type: Number,
         required: true,
@@ -25,6 +30,11 @@ const offerSchema = new Schema({
     state: {
         type: String,
         required: true,
+    },
+    offerStatus: {
+        type: String,
+        required: true,
+        default: 'Active',
     },
     image: {
         type: String,

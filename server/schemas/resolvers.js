@@ -45,6 +45,7 @@ const resolvers = {
         addOffer: async (parent, { palletQty, price, material, dimension, address, state, image }, context) => {
             if (context.user) {
                 const offer = await Offer.create({
+                    publisher: context.user.username,
                     palletQty, 
                     price, 
                     material, 
@@ -62,6 +63,21 @@ const resolvers = {
                 return offer;
             }
             throw new AuthenticationError('Please login!');
+        },
+        addPurchase: async (parent, { offerId }, context) => {
+            if (context.user) {
+                const purchase = await Offer.findOne({
+                    _id: offerId,
+                });
+
+                await User.findOneAndUpdate(
+                    { _id: context.user._id },
+                    { $addToSet: { myPurchases: purchase._id } }
+                );
+
+                return purchase;
+            }
+            throw new AuthenticationError('You need to be logged in!');
         },
         removeOffer: async (parent, { offerId }, context) => {
             if (context.user) {

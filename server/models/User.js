@@ -1,8 +1,6 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
-const offerSchema = require('./Offer');
-
 const userSchema = new Schema(
     {
         firsName: {
@@ -42,7 +40,12 @@ const userSchema = new Schema(
                 ref: 'Offer'
             },
         ],
-        myPurchases: [offerSchema],
+        myPurchases: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Offer'
+            }
+        ],
     },
     {
         toJSON: {
