@@ -16,7 +16,9 @@ const resolvers = {
         offers: async () => {
             return Offer.find()
         },
-
+        offersPerState: async (parent, { state }) => {
+            return Offer.find({ state: state });
+        }
     },
 
     Mutation: {

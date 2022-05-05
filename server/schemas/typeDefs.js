@@ -37,6 +37,7 @@ const typeDefs = gql`
         user: User
         me: User
         offers: [Offer]
+        offersPerState: [Offer]
     }
 
     type Mutation {
@@ -46,4 +47,6 @@ const typeDefs = gql`
         addPurchase(offerId: ID!): Offer
         removeOffer(offerId: ID!): Offer
     }
-`
+`;
+
+module.exports = typeDefs;
