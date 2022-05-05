@@ -34,10 +34,11 @@ const typeDefs = gql`
     }
 
     type Query {
-        user: User
+        seller(username: String!): User
+        recycler(username: String!): User
         me: User
         offers: [Offer]
-        offersPerState: [Offer]
+        offersPerState(state: String!): [Offer]
     }
 
     type Mutation {

@@ -4,12 +4,18 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
     Query: {
-        user: async (parent, { username }) => {
+        seller: async (parent, { username }) => {
             return User.findOne({ username }).populate('myOffers');
         },
+        recycler: async (parent, { username }) => {
+            return User.findOne({ username }).populate('myPurchases');
+        },
         me: async (parent, args, context) => {
-            if (context.user) {
+            if (context.user && context.user.userType === 'Seller') {
                 return User.findOne({ _id: context.user._id }).populate('myOffers');
+            }
+            if (context.user && context.user.userType === 'Recycler') {
+                return User.findOne({ _id: context.user._id }).populate('myPurchases');
             }
             throw new AuthenticationError('You need to be logged in!');
         },
