@@ -43,7 +43,7 @@ const offerSchema = new Schema({
     dateCreated: {
         type: Date,
         default: Date.now,
-        get: (timestamp) => dateFormat(timestamp),
+        get: (timestamp) => dateFormat.format_date(timestamp),
     },
 });
 
