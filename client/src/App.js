@@ -12,13 +12,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './pages/Home';
 import Login from './pages/Login';
-import Signup from './pages/Signup';
-import Profile from './pages/Profile';
-import MyOffersList from './components/MyOffersList';
-import CreateOfferForm from './components/CreateOfferForm';
-import AllOffersList from './components/AllOffersList';
-import MyPurchasesList from './components/MyPurchasesList';
-import Footer from './components/Footer';
+//import Signup from './pages/Signup';
+//import Profile from './pages/Profile';
+//import MyOffersList from './components/MyOffersList';
+//import CreateOfferForm from './components/CreateOfferForm';
+//import AllOffersList from './components/AllOffersList';
+//import MyPurchasesList from './components/MyPurchasesList';
+//import Footer from './components/Footer';
 
 const httpLink = createHttpLink({
   uri: 'graphql',
@@ -53,7 +53,7 @@ function App() {
             path="/login"
             element={<Login />}
           />
-          <Route 
+          {/*<Route 
             path="/signup"
             element={<Signup />}
           />
@@ -76,9 +76,9 @@ function App() {
           <Route 
             path="/me/myPurchases"
             element={<MyPurchasesList />}
-          />
+          />*/}
         </Routes>
-        <Footer />
+        {/*<Footer />*/}
       </Router>
     </ApolloProvider>
   );

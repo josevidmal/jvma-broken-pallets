@@ -13,7 +13,7 @@ const Home = () => {
                 sustainable practices, leaving behind the harmful take-make-dispose approach of a
                 Linear Economy. 
             </p>
-            <img src={<CircularEconomy />} alt="circular-economy"/>
+            <img src={CircularEconomy} alt="circular-economy"/>
         </section>
     );
 };
