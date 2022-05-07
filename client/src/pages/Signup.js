@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
+import validateEmail from '../utils/helpers';
 
 const Signup = () => {
     const [formState, setFormState] = useState({
@@ -13,6 +14,8 @@ const Signup = () => {
         password: '',
         userType: '', 
     });
+
+    const [requiredField, setRequiredField] = useState('');
 
     const [addUser, { error }] = useMutation(ADD_USER);
 
@@ -27,6 +30,32 @@ const Signup = () => {
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
+
+        if (!formState.firstName) {
+            setRequiredField("First Name is required");
+            return;
+        } if (!formState.lastName) {
+            setRequiredField("Last Name is required");
+            return;
+        } if (!formState.company) {
+            setRequiredField("Company is required");
+            return;
+        } if (!formState.username) {
+            setRequiredField("Username is required");
+            return;
+        } if (!formState.email) {
+            setRequiredField("Email address is required");
+            return;
+        } if (formState.email && !validateEmail(formState.email)) {
+            setRequiredField("The Email address is not valid");
+            return;
+        } if (!formState.password) {
+            setRequiredField("Password is required");
+            return;
+        } if (!formState.userType) {
+            setRequiredField("Please select a User Type");
+            return;
+        }
 
         try {
             const { data } = await addUser({
@@ -90,6 +119,9 @@ const Signup = () => {
                     <option value="Seller">Seller</option>
                     <option value="Recycler">Recycler</option>
                 </select>
+                {requiredField && (
+                    <p>{requiredField}</p>
+                )}
                 <button type="submit" onClick={handleFormSubmit}>Submit</button>
             </form>
             {error && (
