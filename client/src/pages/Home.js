@@ -1,4 +1,5 @@
 import React from 'react';
+import CircularEconomy from '../assets/images/circular-economy.webp'
 
 const Home = () => {
     return (
@@ -12,7 +13,7 @@ const Home = () => {
                 sustainable practices, leaving behind the harmful take-make-dispose approach of a
                 Linear Economy. 
             </p>
-            <img src={require("../../assets/images/circular-economy.webp")} alt="circular-economy"/>
+            <img src={<CircularEconomy />} alt="circular-economy"/>
         </section>
     );
 };
