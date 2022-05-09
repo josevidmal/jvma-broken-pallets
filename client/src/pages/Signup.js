@@ -52,7 +52,7 @@ const Signup = () => {
         } if (!formState.password) {
             setRequiredField("Password is required");
             return;
-        } if (!formState.userType) {
+        } if (!formState.userType || formState.userType === '') {
             setRequiredField("Please select a User Type");
             return;
         }
@@ -116,6 +116,7 @@ const Signup = () => {
                 />
                 <label htmlFor="userType">User Type:</label>
                 <select name="userType" value={formState.userType} onChange={handleChange}>
+                    <option value="" selected></option>
                     <option value="Seller">Seller</option>
                     <option value="Recycler">Recycler</option>
                 </select>
