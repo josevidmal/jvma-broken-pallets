@@ -115,8 +115,8 @@ const Signup = () => {
                     onChange={handleChange}
                 />
                 <label htmlFor="userType">User Type:</label>
-                <select name="userType" value={formState.userType} onChange={handleChange}>
-                    <option value="" selected></option>
+                <select name="userType" defaultValue="" onChange={handleChange}>
+                    <option value=""></option>
                     <option value="Seller">Seller</option>
                     <option value="Recycler">Recycler</option>
                 </select>

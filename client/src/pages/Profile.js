@@ -1,7 +1,7 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import { QUERY_ME } from '../utils/queries'
-//import Auth from '../utils/auth';
+import Auth from '../utils/auth';
 
 const Profile = () => {
     const { loading, data } = useQuery(QUERY_ME);
@@ -9,6 +9,12 @@ const Profile = () => {
     console.log(userData);
     if (loading) {
         return <div>Loading...</div>
+    }
+
+    if (!Auth.loggedIn()) {
+        return (
+            <h3>You need to be logged in</h3>
+        );
     }
 
     return (

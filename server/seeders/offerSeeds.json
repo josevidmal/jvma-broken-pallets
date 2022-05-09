@@ -7,7 +7,7 @@
         "dimension": "48\" X 40\"",
         "address": "fakeblvd 34, Tultitlan",
         "state": "Estado de México",
-        "image": "../../client/src/assets/images/damaged-pallets-1.jpeg"
+        "image": "damaged-pallets-1.jpeg"
     },
     {
         "seller": "Beer Co.",
@@ -17,7 +17,7 @@
         "dimension": "48\" X 40\"",
         "address": "fakestreet 83, Cuautitlan",
         "state": "Estado de México",
-        "image": "../../client/src/assets/images/damaged-pallets-2.jpeg"
+        "image": "damaged-pallets-2.jpeg"
     },
     {
         "seller": "Guitar Co.",
@@ -27,7 +27,7 @@
         "dimension": "48\" X 48\"",
         "address": "fakeavenue 26, El Marquez",
         "state": "Querétaro",
-        "image": "../../client/src/assets/images/damaged-pallets-3.jpeg"
+        "image": "damaged-pallets-3.jpeg"
     },
     {
         "seller": "Beer Co.",
@@ -37,7 +37,7 @@
         "dimension": "48\" X 48\"",
         "address": "fakedrive 46, Calamanda",
         "state": "Querétaro",
-        "image": "../../client/src/assets/images/damaged-pallets-4.jpeg"
+        "image": "damaged-pallets-4.jpeg"
     },
     {
         "seller": "Guitar Co.",
@@ -47,7 +47,7 @@
         "dimension": "48\" X 40\"",
         "address": "fakeroad 82, Azcapotzalco",
         "state": "CDMX",
-        "image": "../../client/src/assets/images/damaged-pallets-5.jpeg"
+        "image": "damaged-pallets-5.jpeg"
     },
     {
         "seller": "Beer Co.",
@@ -57,6 +57,6 @@
         "dimension": "48\" X 40\"",
         "address": "fakedrive 14, Salinas Victoria",
         "state": "Nuevo León",
-        "image": "../../client/src/assets/images/damaged-pallets-6.jpeg"
+        "image": "damaged-pallets-6.jpeg"
     }
 ]

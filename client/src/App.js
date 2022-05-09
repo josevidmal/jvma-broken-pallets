@@ -16,7 +16,7 @@ import Signup from './pages/Signup';
 import Profile from './pages/Profile';
 //import MyOffersList from './components/MyOffersList';
 //import CreateOfferForm from './components/CreateOfferForm';
-//import AllOffersList from './components/AllOffersList';
+import AllOffersList from './components/AllOffersList';
 //import MyPurchasesList from './components/MyPurchasesList';
 //import Footer from './components/Footer';
 
@@ -68,12 +68,12 @@ function App() {
           <Route 
             path="/createOffer"
             element={<CreateOfferForm />}
-          />
+          />*/}
           <Route 
             path="/allOffers"
             element={<AllOffersList />}
           />
-          <Route 
+          {/*<Route 
             path="/me/myPurchases"
             element={<MyPurchasesList />}
           />*/}
