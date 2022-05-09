@@ -28,16 +28,24 @@ export const ADD_OFFER = gql`
     mutation addOffer($palletQty: Int!, $price: Float!, $material: String!, $dimension: String!, $address: String!, $state: String!, $image: String) {
         addOffer(palletQty: $palletQty, price: $price, material: $material, dimension: $dimension, address: $address, state: $state, image: $image) {
             _id
-            seller
-            palletQty
-            price
-            material
-            dimension
-            address
-            state
-            offerStatus
-            image
-            dateCreated
+            firstName
+            lastName
+            company
+            username
+            email
+            userType
+            myOffers {
+                _id
+                seller
+                palletQty
+                price
+                material
+                dimension
+                address
+                state
+                offerStatus
+                image
+                dateCreated
         }
     }
 `;
@@ -46,16 +54,24 @@ export const ADD_PURCHASE = gql`
     mutation addPurchase($offerId: ID!) {
         addPurchase(offerId: $offerId) {
             _id
-            seller
-            palletQty
-            price
-            material
-            dimension
-            address
-            state
-            offerStatus
-            image
-            dateCreated
+            firstName
+            lastName
+            company
+            username
+            email
+            userType
+            myPurchases {
+                _id
+                seller
+                palletQty
+                price
+                material
+                dimension
+                address
+                state
+                offerStatus
+                image
+                dateCreated
         }
     }
 `;
@@ -64,16 +80,25 @@ export const REMOVE_OFFER = gql`
     mutation removeOffer($offerId: ID!) {
         removeOffer(offerId: $offerId) {
             _id
-            seller
-            palletQty
-            price
-            material
-            dimension
-            address
-            state
-            offerStatus
-            image
-            dateCreated
+            firstName
+            lastName
+            company
+            username
+            email
+            userType
+            myOffers {
+                _id
+                seller
+                palletQty
+                price
+                material
+                dimension
+                address
+                state
+                offerStatus
+                image
+                dateCreated
+            }
         }
     }
 `;

@@ -14,7 +14,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Profile from './pages/Profile';
-//import MyOffersList from './components/MyOffersList';
+import MyOffersList from './components/MyOffersList';
 //import CreateOfferForm from './components/CreateOfferForm';
 import AllOffersList from './components/AllOffersList';
 //import MyPurchasesList from './components/MyPurchasesList';
@@ -61,11 +61,11 @@ function App() {
             path="/me"
             element={<Profile />}
           />
-          {/*<Route 
+          <Route 
             path="/me/myOffers"
             element={<MyOffersList />}
           />
-          <Route 
+          {/*<Route 
             path="/createOffer"
             element={<CreateOfferForm />}
           />*/}

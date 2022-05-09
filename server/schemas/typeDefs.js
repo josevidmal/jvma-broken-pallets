@@ -44,9 +44,9 @@ const typeDefs = gql`
     type Mutation {
         loginUser(email: String!, password: String!): Auth
         addUser(firstName: String!, lastName: String!, company: String!, username: String!, email: String!, password: String!, userType: String!): Auth
-        addOffer(palletQty: Int!, price: Float!, material: String!, dimension: String!, address: String!, state: String!, image: String): Offer
-        addPurchase(offerId: ID!): Offer
-        removeOffer(offerId: ID!): Offer
+        addOffer(palletQty: Int!, price: Float!, material: String!, dimension: String!, address: String!, state: String!, image: String): User
+        addPurchase(offerId: ID!): User
+        removeOffer(offerId: ID!): User
     }
 `;
 

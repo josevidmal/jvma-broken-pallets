@@ -68,7 +68,7 @@ const resolvers = {
                     { $addToSet: { myOffers: offer._id } }
                 );
 
-                return offer;
+                return User.findOne({ _id: context.user._id }).populate('myOffers');
             }
             throw new AuthenticationError('Please login!');
         },
@@ -83,22 +83,23 @@ const resolvers = {
                     { $addToSet: { myPurchases: purchase._id } }
                 );
 
-                return purchase;
+                return User.findOne({ _id: context.user._id }).populate('myPurchases')
             }
             throw new AuthenticationError('You need to be logged in!');
         },
         removeOffer: async (parent, { offerId }, context) => {
             if (context.user) {
-                const offer = await Offer.findOneAndDelete({
+                await User.findOneAndUpdate(
+                    { _id: context.user._id },
+                    { $pull: { myOffers: { _id: offerId } } },
+                    { new: true }
+                );
+                
+                await Offer.findOneAndDelete({
                     _id: offerId,
                 });
 
-                await User.findOneAndUpdate(
-                    { _id: context.user._id },
-                    { $pull: { myOffers: offer._id} }
-                );
-
-                return offer;
+                return User.findOne({ _id: context.user._id }).populate('myOffers')
             }
             throw new AuthenticationError('Please login!');
         }
