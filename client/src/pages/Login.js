@@ -37,7 +37,7 @@ const Login = () => {
                 variables: { ...formState },
             });
 
-            Auth.login(data.login.token);
+            Auth.login(data.loginUser.token);
         } catch (err) {
             console.error(err);
         }
@@ -69,7 +69,7 @@ const Login = () => {
                 {requiredField && (
                     <p>{requiredField}</p>
                 )}
-                <button type="submit" onClick={handleFormSubmit}>Submit</button>
+                <button type="submit">Submit</button>
             </form>
             {error && (
                 <p>{error.message}</p>

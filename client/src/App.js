@@ -13,7 +13,7 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-//import Profile from './pages/Profile';
+import Profile from './pages/Profile';
 //import MyOffersList from './components/MyOffersList';
 //import CreateOfferForm from './components/CreateOfferForm';
 //import AllOffersList from './components/AllOffersList';
@@ -21,7 +21,7 @@ import Signup from './pages/Signup';
 //import Footer from './components/Footer';
 
 const httpLink = createHttpLink({
-  uri: 'graphql',
+  uri: 'http://localhost:3001/graphql',
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -57,11 +57,11 @@ function App() {
             path="/signup"
             element={<Signup />}
           />
-          {/*<Route 
+          <Route 
             path="/me"
             element={<Profile />}
           />
-          <Route 
+          {/*<Route 
             path="/me/myOffers"
             element={<MyOffersList />}
           />

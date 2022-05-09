@@ -14,14 +14,14 @@ const Header = () => {
                             <li><Link to="/me/myOffers">My Offers</Link></li>
                             <li><Link to="/createOffer">Create Offer</Link></li>
                             <li><Link to="/me">Profile</Link></li>
-                            <li><Link to="/">Logout</Link></li>
+                            <li><Link onClick={Auth.logout} to="/">Logout</Link></li>
                         </ul>
                     ) : (
                         <ul>
                             <li><Link to="/allOffers">All Offers</Link></li>
                             <li><Link to="/me/myPurchases">My Purchases</Link></li>
                             <li><Link to="/me">Profile</Link></li>
-                            <li><Link to="/">Logout</Link></li>
+                            <li><Link onClick={Auth.logout} to="/">Logout</Link></li>
                         </ul>
                     )}
                 </nav>
