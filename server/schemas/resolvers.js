@@ -54,6 +54,7 @@ const resolvers = {
             if (context.user) {
                 const offer = await Offer.create({
                     seller: context.user.company,
+                    email: context.user.email,
                     palletQty, 
                     price, 
                     material, 

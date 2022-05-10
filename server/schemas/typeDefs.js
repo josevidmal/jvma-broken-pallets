@@ -17,6 +17,7 @@ const typeDefs = gql`
     type Offer {
         _id: ID
         seller: String
+        email: String
         palletQty: Int
         price: Float
         material: String

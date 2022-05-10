@@ -13,6 +13,7 @@ export const QUERY_SELLER = gql`
             myOffers {
                 _id
                 seller
+                email
                 palletQty
                 price
                 material
@@ -40,6 +41,7 @@ export const QUERY_RECYCLER = gql`
             myPurchases {
                 _id
                 seller
+                email
                 palletQty
                 price
                 material
@@ -67,6 +69,7 @@ export const QUERY_ME = gql`
             myOffers {
                 _id
                 seller
+                email
                 palletQty
                 price
                 material
@@ -80,6 +83,7 @@ export const QUERY_ME = gql`
             myPurchases {
                 _id
                 seller
+                email
                 palletQty
                 price
                 material
@@ -99,6 +103,7 @@ export const QUERY_OFFERS = gql`
         offers {
             _id
             seller
+            email
             palletQty
             price
             material
@@ -117,6 +122,7 @@ export const QUERY_OFFERS_PER_STATE = gql`
         offersPerState(state: $state) {
             _id
             seller
+            email
             palletQty
             price
             material

@@ -37,6 +37,7 @@ export const ADD_OFFER = gql`
             myOffers {
                 _id
                 seller
+                email
                 palletQty
                 price
                 material
@@ -64,6 +65,7 @@ export const ADD_PURCHASE = gql`
             myPurchases {
                 _id
                 seller
+                email
                 palletQty
                 price
                 material
@@ -91,6 +93,7 @@ export const REMOVE_OFFER = gql`
             myOffers {
                 _id
                 seller
+                email
                 palletQty
                 price
                 material

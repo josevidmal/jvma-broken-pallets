@@ -1,6 +1,7 @@
 [
     {
         "seller": "Guitar Co.",
+        "email": "vidalmaza@fakemail.com",
         "palletQty": 93,
         "price": 14272.43,
         "material": "HDPE",
@@ -11,6 +12,7 @@
     },
     {
         "seller": "Beer Co.",
+        "email": "joevidal@fakemail.com",
         "palletQty": 78,
         "price": 11970.43,
         "material": "HDPE",
@@ -21,6 +23,7 @@
     },
     {
         "seller": "Guitar Co.",
+        "email": "vidalmaza@fakemail.com",
         "palletQty": 108,
         "price": 21229.78,
         "material": "HDPE",
@@ -31,6 +34,7 @@
     },
     {
         "seller": "Beer Co.",
+        "email": "joevidal@fakemail.com",
         "palletQty": 64,
         "price": 12580.61,
         "material": "PP",
@@ -41,6 +45,7 @@
     },
     {
         "seller": "Guitar Co.",
+        "email": "vidalmaza@fakemail.com",
         "palletQty": 59,
         "price": 9725.91,
         "material": "PP",
@@ -51,6 +56,7 @@
     },
     {
         "seller": "Beer Co.",
+        "email": "joevidal@fakemail.com",
         "palletQty": 120,
         "price": 18416.04,
         "material": "HDPE",

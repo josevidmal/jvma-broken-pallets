@@ -30,6 +30,7 @@ const MyPurchasesList = () => {
                         <h4>Order ID: {myPurchase._id}</h4>
                         <ul>
                             <li>Seller: {myPurchase.seller}</li>
+                            <li>Email: {myPurchase.email}</li>
                             <li>Pallets: {myPurchase.palletQty}</li>
                             <li>Price: ${myPurchase.price} MXN</li>
                             <li>Material: {myPurchase.material}</li>

@@ -53,6 +53,7 @@ const MyOffersList = () => {
                         <h4>Offer ID: {myOffer._id}</h4>
                         <ul>
                             <li>Seller: {myOffer.seller}</li>
+                            <li>Email: {myOffer.email}</li>
                             <li>Pallets: {myOffer.palletQty}</li>
                             <li>Price: ${myOffer.price} MXN</li>
                             <li>Material: {myOffer.material}</li>
