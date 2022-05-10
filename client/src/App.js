@@ -8,7 +8,6 @@ import {
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-// import components here
 import Header from './components/Header';
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -17,7 +16,7 @@ import Profile from './pages/Profile';
 import MyOffersList from './components/MyOffersList';
 import CreateOfferForm from './components/CreateOfferForm';
 import AllOffersList from './components/AllOffersList';
-//import MyPurchasesList from './components/MyPurchasesList';
+import MyPurchasesList from './components/MyPurchasesList';
 import Footer from './components/Footer';
 
 const httpLink = createHttpLink({
@@ -73,10 +72,10 @@ function App() {
             path="/allOffers"
             element={<AllOffersList />}
           />
-          {/*<Route 
+          <Route 
             path="/me/myPurchases"
             element={<MyPurchasesList />}
-          />*/}
+          />
         </Routes>
         <Footer />
       </Router>
