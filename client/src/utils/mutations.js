@@ -46,6 +46,7 @@ export const ADD_OFFER = gql`
                 offerStatus
                 image
                 dateCreated
+            }
         }
     }
 `;
@@ -72,6 +73,7 @@ export const ADD_PURCHASE = gql`
                 offerStatus
                 image
                 dateCreated
+            }
         }
     }
 `;
