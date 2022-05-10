@@ -46,6 +46,7 @@ const MyOffersList = () => {
 
     return (
         <section>
+            <h2>My Offers</h2>
             {me.myOffers?.map((myOffer) => {
                 return (
                     <div key={myOffer._id}>

@@ -144,8 +144,8 @@ const CreateOfferForm = () => {
                 <label htmlFor="dimension">Dimension:</label>
                 <select name="dimension" defaultValue="" onChange={handleChange}>
                     <option value=""></option>
-                    <option value='48" X 40"'>48" x 40"</option>
-                    <option value='48" X 48"'>48" x 48"</option>
+                    <option value='48" x 40"'>48" x 40"</option>
+                    <option value='48" x 48"'>48" x 48"</option>
                 </select>
                 <label htmlFor="address">Address:</label>
                 <input 

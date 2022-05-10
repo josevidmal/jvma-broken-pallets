@@ -23,6 +23,7 @@ const AllOffersList = () => {
 
     return (
         <section>
+            <h2>All Offers</h2>
             {offers.map((offer) => (
                 <div key={offer._id}>
                     <h4>Offer ID: {offer._id}</h4>

@@ -27,12 +27,12 @@ class AuthService {
 
     login(idToken) {
         localStorage.setItem('id_token', idToken);
-        /*if (this.getProfile().data.userType === 'Seller') { 
+        if (this.getProfile().data.userType === 'Seller') { 
             window.location.assign('/me/myOffers');
         } if (this.getProfile().data.userType === 'Recycler') {
             window.location.assign('/allOffers');
-        }*/
-        window.location.assign('/me');
+        }
+        //window.location.assign('/me');
     }
 
     logout() {
