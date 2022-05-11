@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 import {
   ApolloClient,
   InMemoryCache,
@@ -43,40 +44,42 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <Header />
-        <Routes>
-          <Route 
-            path="/"
-            element={<Home />}
-          />
-          <Route 
-            path="/login"
-            element={<Login />}
-          />
-          <Route 
-            path="/signup"
-            element={<Signup />}
-          />
-          <Route 
-            path="/me"
-            element={<Profile />}
-          />
-          <Route 
-            path="/me/myOffers"
-            element={<MyOffersList />}
-          />
-          <Route 
-            path="/createOffer"
-            element={<CreateOfferForm />}
-          />
-          <Route 
-            path="/allOffers"
-            element={<AllOffersList />}
-          />
-          <Route 
-            path="/me/myPurchases"
-            element={<MyPurchasesList />}
-          />
-        </Routes>
+        <main className="main-container">
+          <Routes>
+            <Route 
+              path="/"
+              element={<Home />}
+            />
+            <Route 
+              path="/login"
+              element={<Login />}
+            />
+            <Route 
+              path="/signup"
+              element={<Signup />}
+            />
+            <Route 
+              path="/me"
+              element={<Profile />}
+            />
+            <Route 
+              path="/me/myOffers"
+              element={<MyOffersList />}
+            />
+            <Route 
+              path="/createOffer"
+              element={<CreateOfferForm />}
+            />
+            <Route 
+              path="/allOffers"
+              element={<AllOffersList />}
+            />
+            <Route 
+              path="/me/myPurchases"
+              element={<MyPurchasesList />}
+            />
+          </Routes>
+        </main>
         <Footer />
       </Router>
     </ApolloProvider>

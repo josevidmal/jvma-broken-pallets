@@ -3,7 +3,7 @@ import CircularEconomy from '../assets/images/circular-economy.webp'
 
 const Home = () => {
     return (
-        <section>
+        <section id="about-section">
             <p>
                 Welcome to Broken Pallets, the web application where companies can offer their damaged 
                 plastic pallets to recyclers, at a residual price of their original value. All with the 
@@ -13,7 +13,7 @@ const Home = () => {
                 sustainable practices, leaving behind the harmful take-make-dispose approach of a
                 Linear Economy. 
             </p>
-            <img src={CircularEconomy} alt="circular-economy"/>
+            <img id="home-image" src={CircularEconomy} alt="circular-economy"/>
         </section>
     );
 };

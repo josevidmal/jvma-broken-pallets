@@ -1,0 +1,97 @@
+header {
+    width: 100vw;
+    height: 150px;
+    background-image: url("./assets/images/recycled-plastic-pallets.png");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+header h1 {
+    flex-basis: 73%;
+    height: 35%;
+    color: black;
+    text-align: center;
+    background-color: white;
+    border-radius: 0px 0px 10px 10px;
+    font-family: 'Bungee Shade';
+    padding: 5px 0px;
+}
+
+li {
+    list-style: none;
+}
+
+nav {
+    flex-basis: 100%;
+    align-self: flex-end;
+    height: 20%;
+    background-color: lightgreen;
+    padding: 5px 0px;
+}
+
+nav ul {
+    text-align: center;
+}
+
+.home-nav-li {
+    display: inline;
+    margin: 0% 10%;
+    text-align: center;
+}
+
+.seller-nav-li {
+    display: inline;
+    margin: 0% 3%;
+    text-align: center;
+}
+
+.recycler-nav-li {
+    display: inline;
+    margin: 0% 3%;
+    text-align: center;
+}
+
+.links {
+    text-decoration: none;
+    color: black;
+}
+
+.links:visited, .links:active {
+    color: none;
+}
+
+.links:hover {
+    color: rgb(40, 40, 255);
+}
+
+.main-container {
+    background-image: url("./assets/images/light-green-background.webp");
+    background-position: center;
+    background-size: cover;
+    padding: 5% 5%;
+}
+
+#about-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
+    background-color: white;
+    padding: 4% 4%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px gray;
+}
+
+#home-image {
+    width: 100%;
+    align-self: flex-end;
+    margin-top: 10px;
+}
+
+#about-section p {
+    text-align: justify;
+    margin-bottom: 10px;
+}
