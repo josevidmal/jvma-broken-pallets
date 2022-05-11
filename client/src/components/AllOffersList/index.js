@@ -1,12 +1,31 @@
 import React from 'react';
-import { useQuery } from '@apollo/client';
+import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_OFFERS } from '../../utils/queries';
+import { ADD_PURCHASE } from '../../utils/mutations';
 import Auth from '../../utils/auth';
 
 const AllOffersList = () => {
     const { loading, data } = useQuery(QUERY_OFFERS);
     const offers = data?.offers || [];
+    const [addPurchase, { error }] = useMutation(ADD_PURCHASE);
     console.log(offers);
+
+    const handleSaveOffer = async (offerId) => {
+
+        try {
+            const { data } = await addPurchase({
+                variables: { offerId }
+            });
+            if (!data) {
+                throw new Error('something did not work!');
+            }
+        } catch (err) {
+            console.error(err);
+        }
+
+        window.location.assign('me/myPurchases');
+    };
+
     if (loading) {
         return <div>Loading...</div>;
     }
@@ -40,7 +59,10 @@ const AllOffersList = () => {
                         <li>Date Created: {offer.dateCreated}</li>
                     </ul>
                     <img src={require(`../../assets/images/${offer.image}`)} alt='damaged-plastic-pallets'/>
-                    <button>Buy</button>
+                    <button onClick={() => handleSaveOffer(offer._id)}>Buy</button>
+                    {error && (
+                        <p>{error.message}</p>
+                    )}
                 </div>
             ))}
         </section>
