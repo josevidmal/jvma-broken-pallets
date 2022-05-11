@@ -48,6 +48,7 @@ const typeDefs = gql`
         addOffer(palletQty: Int!, price: Float!, material: String!, dimension: String!, address: String!, state: String!, image: String): User
         addPurchase(offerId: ID!): User
         removeOffer(offerId: ID!): User
+        removePurchase(offerId: ID!): User
     }
 `;
 

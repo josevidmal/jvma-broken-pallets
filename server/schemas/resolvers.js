@@ -90,17 +90,35 @@ const resolvers = {
         },
         removeOffer: async (parent, { offerId }, context) => {
             if (context.user) {
+                const offer = await Offer.findOne({
+                    _id: offerId,
+                });
+                
                 await User.findOneAndUpdate(
                     { _id: context.user._id },
-                    { $pull: { myOffers: { _id: offerId } } },
-                    { new: true }
+                    { $pull: { myOffers: offer._id } },
                 );
                 
-                await Offer.findOneAndDelete({
+                await Offer.findOneAndRemove({
                     _id: offerId,
                 });
 
                 return User.findOne({ _id: context.user._id }).populate('myOffers')
+            }
+            throw new AuthenticationError('Please login!');
+        },
+        removePurchase: async (parent, { offerId }, context) => {
+            if (context.user) {
+                const purchase = await Offer.findOne({
+                    _id: offerId,
+                });
+                
+                await User.findOneAndUpdate(
+                    { _id: context.user._id },
+                    { $pull: { myPurchases: purchase._id } },
+                );
+
+                return User.findOne({ _id: context.user._id }).populate('myPurchases')
             }
             throw new AuthenticationError('Please login!');
         }

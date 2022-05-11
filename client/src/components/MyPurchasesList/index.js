@@ -1,11 +1,33 @@
 import React from 'react';
 import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_ME } from '../../utils/queries';
+import { REMOVE_PURCHASE } from '../../utils/mutations';
 import Auth from '../../utils/auth';
 
 const MyPurchasesList = () => {
     const { loading, data } = useQuery(QUERY_ME);
     const me = data?.me || {};
+    const [removePurchase] = useMutation(REMOVE_PURCHASE);
+
+    const handleRemovePurchase = async (offerId) => {
+        const token = Auth.loggedIn() ? Auth.getToken() : null;
+
+        if (!token) {
+            return false;
+        }
+
+        try {
+            const { data } = await removePurchase({
+                variables: { offerId }
+            });
+
+            if (!data) {
+                throw new Error('something did not work!');
+            }
+        } catch (err) {
+            console.error(err);
+        }
+    };
     
     if (loading) {
         return <div>Loading...</div>;
@@ -40,6 +62,7 @@ const MyPurchasesList = () => {
                             <li>Status: {myPurchase.offerStatus}</li>
                         </ul>
                         <img src={require(`../../assets/images/${myPurchase.image}`)} alt='damaged-pallets' />
+                        <button onClick={() => handleRemovePurchase(myPurchase._id)}>Remove Purchase</button>
                     </div>
                 );
             })}

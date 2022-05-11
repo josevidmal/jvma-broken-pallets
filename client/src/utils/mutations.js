@@ -107,3 +107,31 @@ export const REMOVE_OFFER = gql`
         }
     }
 `;
+
+export const REMOVE_PURCHASE = gql`
+    mutation removePurchase($offerId: ID!) {
+        removePurchase(offerId: $offerId) {
+            _id
+            firstName
+            lastName
+            company
+            username
+            email
+            userType
+            myPurchases {
+                _id
+                seller
+                email
+                palletQty
+                price
+                material
+                dimension
+                address
+                state
+                offerStatus
+                image
+                dateCreated
+            }
+        }
+    }
+`;
