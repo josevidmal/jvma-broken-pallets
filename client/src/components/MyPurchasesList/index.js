@@ -44,11 +44,11 @@ const MyPurchasesList = () => {
     }
 
     return (
-        <section>
-            <h2>My Purchases</h2>
+        <section id="myPurchases-section" className="section-cards">
+            <h2 className="section-headings">My Purchases</h2>
             {me.myPurchases?.map((myPurchase) => {
                 return (
-                    <div key={myPurchase._id}>
+                    <div className="section-cards" key={myPurchase._id}>
                         <h4>Order ID: {myPurchase._id}</h4>
                         <ul>
                             <li>Seller: {myPurchase.seller}</li>
@@ -62,7 +62,9 @@ const MyPurchasesList = () => {
                             <li>Status: {myPurchase.offerStatus}</li>
                         </ul>
                         <img src={require(`../../assets/images/${myPurchase.image}`)} alt='damaged-pallets' />
-                        <button onClick={() => handleRemovePurchase(myPurchase._id)}>Remove Purchase</button>
+                        <div>
+                            <button className="btns" onClick={() => handleRemovePurchase(myPurchase._id)}>Remove Purchase</button>
+                        </div>
                     </div>
                 );
             })}

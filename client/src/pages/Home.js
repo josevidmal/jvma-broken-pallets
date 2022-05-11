@@ -3,7 +3,7 @@ import CircularEconomy from '../assets/images/circular-economy.webp'
 
 const Home = () => {
     return (
-        <section id="about-section">
+        <section id="about-section" className="section-cards">
             <p>
                 Welcome to Broken Pallets, the web application where companies can offer their damaged 
                 plastic pallets to recyclers, at a residual price of their original value. All with the 

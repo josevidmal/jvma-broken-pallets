@@ -18,8 +18,8 @@ const Profile = () => {
     }
 
     return (
-        <section>
-            <h2>User Information</h2>
+        <section id="profile-section" className="section-cards">
+            <h2 className="section-headings">User Information</h2>
             <ul>
                 <li>Name: {`${userData.firstName} ${userData.lastName}`}</li>
                 <li>Company: {`${userData.company}`}</li>

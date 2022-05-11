@@ -118,11 +118,12 @@ const CreateOfferForm = () => {
     }
 
     return (
-        <section>
-            <h2>Create Offer</h2>
-            <form onSubmit={handleFormSubmit}>
+        <section id="createOffer-section" className="section-cards">
+            <h2 className="section-headings">Create Offer</h2>
+            <form id="createOffer-form" className="forms" onSubmit={handleFormSubmit}>
                 <label htmlFor="palletQty">Pallet Quantity:</label>
                 <input 
+                    className="form-inputs"
                     name="palletQty"
                     type="number"
                     value={palletQty}
@@ -130,32 +131,34 @@ const CreateOfferForm = () => {
                 />
                 <label htmlFor="price">Price:</label>
                 <input 
+                    className="form-inputs"
                     name="price"
                     type="number"
                     value={price}
                     onChange={handleChange}
                 />
                 <label htmlFor="material">Material:</label>
-                <select name="material" defaultValue="" onChange={handleChange}>
+                <select className="form-selects" name="material" defaultValue="" onChange={handleChange}>
                     <option value=""></option>
                     <option value="HDPE">HDPE</option>
                     <option value="PP">PP</option>
                 </select>
                 <label htmlFor="dimension">Dimension:</label>
-                <select name="dimension" defaultValue="" onChange={handleChange}>
+                <select className="form-selects" name="dimension" defaultValue="" onChange={handleChange}>
                     <option value=""></option>
                     <option value='48" x 40"'>48" x 40"</option>
                     <option value='48" x 48"'>48" x 48"</option>
                 </select>
                 <label htmlFor="address">Address:</label>
                 <input 
+                    className="form-inputs"
                     name="address"
                     type="text"
                     value={address}
                     onChange={handleChange}
                 />
                 <label htmlFor="state">State:</label>
-                <select name="state" defaultValue="" onChange={handleChange}>
+                <select className="form-selects" name="state" defaultValue="" onChange={handleChange}>
                     <option value=""></option>
                     <option value="Aguascalientes">Aguascalientes</option>
                     <option value="Baja California">Baja California</option>
@@ -192,18 +195,21 @@ const CreateOfferForm = () => {
                 </select>
                 <label htmlFor="image">Image:</label>
                 <input 
+                    className="form-inputs"
                     name="image"
                     type="text"
                     value={image}
                     onChange={handleChange}
                 />
                 {requiredField && (
-                    <p>{requiredField}</p>
+                    <p className="required-fields">{requiredField}</p>
                 )}
-                <button type="submit">Create Offer</button>
+                <div>
+                    <button className="btns" type="submit">Create Offer</button>
+                </div>
             </form>
             {error && (
-                <p>{error.message}</p>
+                <p className="error-messages">{error.message}</p>
             )}
         </section>
     );

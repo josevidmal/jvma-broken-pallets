@@ -45,11 +45,11 @@ const MyOffersList = () => {
     }
 
     return (
-        <section>
-            <h2>My Offers</h2>
+        <section id="myOffers-section">
+            <h2 className="section-headings">My Offers</h2>
             {me.myOffers?.map((myOffer) => {
                 return (
-                    <div key={myOffer._id}>
+                    <div className="section-cards" key={myOffer._id}>
                         <h4>Offer ID: {myOffer._id}</h4>
                         <ul>
                             <li>Seller: {myOffer.seller}</li>
@@ -64,7 +64,9 @@ const MyOffersList = () => {
                             <li>Date Created: {myOffer.dateCreated}</li>
                         </ul>
                         <img src={require(`../../assets/images/${myOffer.image}`)} alt='damaged-pallets'/>
-                        <button onClick={() => handleDeleteOffer(myOffer._id)}>Delete</button>
+                        <div>
+                            <button className="btns" onClick={() => handleDeleteOffer(myOffer._id)}>Delete</button>
+                        </div>
                     </div>
                 );
             })}

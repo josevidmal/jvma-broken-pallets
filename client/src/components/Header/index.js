@@ -24,8 +24,8 @@ const Header = () => {
                         </ul>
                     ) : (
                         <ul>
-                            <li className="recycler-nav-li"><Link className="links" to="/allOffers"><MdLocalOffer />All Offers</Link></li>
-                            <li className="recycler-nav-li"><Link className="links" to="/me/myPurchases"><FaTruck />My Purchases</Link></li>
+                            <li className="recycler-nav-li"><Link className="links" to="/allOffers"><MdLocalOffer /> All Offers</Link></li>
+                            <li className="recycler-nav-li"><Link className="links" to="/me/myPurchases"><FaTruck /> My Purchases</Link></li>
                             <li className="recycler-nav-li"><Link className="links" to="/me"><BsFilePersonFill /> Profile</Link></li>
                             <li className="recycler-nav-li"><Link className="links" onClick={Auth.logout} to="/"><RiLogoutBoxRFill /> Logout</Link></li>
                         </ul>

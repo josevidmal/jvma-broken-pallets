@@ -41,10 +41,10 @@ const AllOffersList = () => {
     }
 
     return (
-        <section>
-            <h2>All Offers</h2>
+        <section id="allOffers-section">
+            <h2 className="section-headings">All Offers</h2>
             {offers.map((offer) => (
-                <div key={offer._id}>
+                <div className="section-cards" key={offer._id}>
                     <h4>Offer ID: {offer._id}</h4>
                     <ul>
                         <li>Seller: {offer.seller}</li>
@@ -59,9 +59,11 @@ const AllOffersList = () => {
                         <li>Date Created: {offer.dateCreated}</li>
                     </ul>
                     <img src={require(`../../assets/images/${offer.image}`)} alt='damaged-plastic-pallets'/>
-                    <button onClick={() => handleSaveOffer(offer._id)}>Buy</button>
+                    <div>
+                        <button className="btns" onClick={() => handleSaveOffer(offer._id)}>Buy</button>
+                    </div>
                     {error && (
-                        <p>{error.message}</p>
+                        <p className="error-messages">{error.message}</p>
                     )}
                 </div>
             ))}

@@ -69,11 +69,12 @@ const Signup = () => {
     };
 
     return (
-        <section>
-            <h2>Sign Up</h2>
-            <form onSubmit={handleFormSubmit}>
+        <section id="signup-section" className="section-cards">
+            <h2 className="section-headings">Sign Up</h2>
+            <form id="signup-form" className="forms" onSubmit={handleFormSubmit}>
                 <label htmlFor="firstName">First Name:</label>
                 <input 
+                    className="form-inputs"
                     name="firstName"
                     type="text"
                     value={formState.firstName}
@@ -81,6 +82,7 @@ const Signup = () => {
                 />
                 <label htmlFor="lastName">Last Name:</label>
                 <input 
+                    className="form-inputs"
                     name="lastName"
                     type="text"
                     value={formState.lastName}
@@ -88,6 +90,7 @@ const Signup = () => {
                 />
                 <label htmlFor="company">Company:</label>
                 <input 
+                    className="form-inputs"
                     name="company"
                     type="text"
                     value={formState.company}
@@ -95,6 +98,7 @@ const Signup = () => {
                 />
                 <label htmlFor="username">Username:</label>
                 <input 
+                    className="form-inputs"
                     name="username"
                     type="text"
                     value={formState.username}
@@ -102,6 +106,7 @@ const Signup = () => {
                 />
                 <label htmlFor="email">Email:</label>
                 <input 
+                    className="form-inputs"
                     name="email"
                     type="email"
                     value={formState.email}
@@ -109,24 +114,27 @@ const Signup = () => {
                 />
                 <label htmlFor="password">Password:</label>
                 <input 
+                    className="form-inputs"
                     name="password"
                     type="password"
                     value={formState.password}
                     onChange={handleChange}
                 />
                 <label htmlFor="userType">User Type:</label>
-                <select name="userType" defaultValue="" onChange={handleChange}>
+                <select className="form-selects" name="userType" defaultValue="" onChange={handleChange}>
                     <option value=""></option>
                     <option value="Seller">Seller</option>
                     <option value="Recycler">Recycler</option>
                 </select>
                 {requiredField && (
-                    <p>{requiredField}</p>
+                    <p className="required-fields">{requiredField}</p>
                 )}
-                <button type="submit">Submit</button>
+                <div>
+                    <button className="btns" type="submit">Submit</button>
+                </div>
             </form>
             {error && (
-                <p>{error.message}</p>
+                <p className="error-messages">{error.message}</p>
             )}
         </section>
     );

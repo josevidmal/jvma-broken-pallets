@@ -49,11 +49,12 @@ const Login = () => {
     };
 
     return (
-        <section>
-            <h2>Login</h2>
-            <form onSubmit={handleFormSubmit}>
+        <section id="login-section" className="section-cards">
+            <h2 className="section-headings">Login</h2>
+            <form id="login-form" className="forms" onSubmit={handleFormSubmit}>
                 <label htmlFor="email">Email:</label>
                 <input 
+                    className="form-inputs"
                     name="email"
                     type="email"
                     value={formState.email}
@@ -61,18 +62,21 @@ const Login = () => {
                 />
                 <label htmlFor="password">Password:</label>
                 <input 
+                    className="form-inputs"
                     name="password"
                     type="password"
                     value={formState.password}
                     onChange={handleChange}
                 />
                 {requiredField && (
-                    <p>{requiredField}</p>
+                    <p className="required-fields">{requiredField}</p>
                 )}
-                <button type="submit">Submit</button>
+                <div>
+                    <button className="btns" type="submit">Submit</button>
+                </div>
             </form>
             {error && (
-                <p>{error.message}</p>
+                <p className="error-messages">{error.message}</p>
             )}
         </section>
     );
