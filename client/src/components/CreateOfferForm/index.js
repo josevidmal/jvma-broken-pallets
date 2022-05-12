@@ -12,16 +12,6 @@ const CreateOfferForm = () => {
     const [state, setState] = useState('');
     const [image, setImage] = useState('default.jpeg');
 
-    /*const [formState, setFormState] = useState({
-        palletQty: 0,
-        price: 0,
-        material: '',
-        dimension: '',
-        address: '',
-        state: '',
-        image: '',
-    });*/
-
     const [requiredField, setRequiredField] = useState('');
 
     const [addOffer, { error }] = useMutation(ADD_OFFER);
@@ -47,23 +37,6 @@ const CreateOfferForm = () => {
         } if (name === 'image') {
             setImage(value);
         }
-
-        /*setFormState({
-            ...formState,
-            [name]: value,
-        });
-        if (type === "number") {
-            setFormState({
-                ...formState,
-                [name]: Number(value),
-            })
-        } if (type === "text") {
-            setFormState({
-                ...formState,
-                [name]: value,
-            });
-        }
-        console.log(formState);*/
 
         console.log(palletQty, price, material, dimension, address, state, image);
     };
