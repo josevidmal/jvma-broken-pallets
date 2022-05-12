@@ -26,31 +26,33 @@ This is the link to the deployed application: https://jvma-broken-pallets.heroku
 
 The application looks like this:
 
-![Broken Pallets 1]()
+### Home Screen
 
-![Broken Pallets 2]()
+![Broken Pallets 1](./client/src/assets/images/broken-pallets-1.png)
 
-![Broken Pallets 3]()
+### Login Screen
 
-![Broken Pallets 4]()
+![Broken Pallets 2](./client/src/assets/images/broken-pallets-2.png)
 
-![Broken Pallets 5]()
+### Sign up Screen
 
-![Broken Pallets 6]()
+![Broken Pallets 3](./client/src/assets/images/broken-pallets-3.png)
 
-![Broken Pallets 7]()
+### Seller Screens
 
-![Broken Pallets 8]()
+![Broken Pallets 4](./client/src/assets/images/broken-pallets-4.png)
 
-![Broken Pallets 9]()
+![Broken Pallets 5](./client/src/assets/images/broken-pallets-5.png)
 
-![Broken Pallets 10]()
+![Broken Pallets 6](./client/src/assets/images/broken-pallets-6.png)
 
-![Broken Pallets 12]()
+### Recycler Screens
 
-![Broken Pallets 13]()
+![Broken Pallets 7](./client/src/assets/images/broken-pallets-7.png)
 
-![Broken Pallets 14]()
+![Broken Pallets 8](./client/src/assets/images/broken-pallets-8.png)
+
+![Broken Pallets 9](./client/src/assets/images/broken-pallets-9.png)
 
 ## Technologies Used
 

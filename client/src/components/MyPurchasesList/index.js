@@ -52,7 +52,7 @@ const MyPurchasesList = () => {
                         <h4 className="offer-ids">Order ID: {myPurchase._id}</h4>
                         <ul className="offer-lists">
                             <li className="cards-list-items">Seller: {myPurchase.seller}</li>
-                            <li className="cards-list-items">Email: {myPurchase.email}</li>
+                            <li className="cards-list-items">Email: <a href={`mailto:${myPurchase.email}`}>{myPurchase.email}</a></li>
                             <li className="cards-list-items">Pallets: {myPurchase.palletQty}</li>
                             <li className="cards-list-items">Price: ${myPurchase.price} MXN</li>
                             <li className="cards-list-items">Material: {myPurchase.material}</li>
