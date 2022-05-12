@@ -49,23 +49,23 @@ const MyOffersList = () => {
             <h2 className="section-headings">My Offers</h2>
             {me.myOffers?.map((myOffer) => {
                 return (
-                    <div className="section-cards" key={myOffer._id}>
-                        <h4>Offer ID: {myOffer._id}</h4>
-                        <ul>
-                            <li>Seller: {myOffer.seller}</li>
-                            <li>Email: {myOffer.email}</li>
-                            <li>Pallets: {myOffer.palletQty}</li>
-                            <li>Price: ${myOffer.price} MXN</li>
-                            <li>Material: {myOffer.material}</li>
-                            <li>Dimension: {myOffer.dimension}</li>
-                            <li>Address: {myOffer.address}</li>
-                            <li>State: {myOffer.state}</li>
-                            <li>Status: {myOffer.offerStatus}</li>
-                            <li>Date Created: {myOffer.dateCreated}</li>
+                    <div className="section-cards offer-cards" key={myOffer._id}>
+                        <h4 className="offer-ids">Offer ID: {myOffer._id}</h4>
+                        <ul className="offer-lists">
+                            <li className="cards-list-items">Seller: {myOffer.seller}</li>
+                            <li className="cards-list-items">Email: {myOffer.email}</li>
+                            <li className="cards-list-items">Pallets: {myOffer.palletQty}</li>
+                            <li className="cards-list-items">Price: ${myOffer.price} MXN</li>
+                            <li className="cards-list-items">Material: {myOffer.material}</li>
+                            <li className="cards-list-items">Dimension: {myOffer.dimension}</li>
+                            <li className="cards-list-items">Address: {myOffer.address}</li>
+                            <li className="cards-list-items">State: {myOffer.state}</li>
+                            <li className="cards-list-items">Status: {myOffer.offerStatus}</li>
+                            <li className="cards-list-items">Date Created: {myOffer.dateCreated}</li>
                         </ul>
-                        <img src={require(`../../assets/images/${myOffer.image}`)} alt='damaged-pallets'/>
-                        <div>
-                            <button className="btns" onClick={() => handleDeleteOffer(myOffer._id)}>Delete</button>
+                        <img className="offer-img" src={require(`../../assets/images/${myOffer.image}`)} alt='damaged-pallets'/>
+                        <div className="offer-btn-div">
+                            <button id="delete-btn" className="btns delete-btns" onClick={() => handleDeleteOffer(myOffer._id)}>Delete</button>
                         </div>
                     </div>
                 );

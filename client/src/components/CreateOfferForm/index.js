@@ -121,7 +121,7 @@ const CreateOfferForm = () => {
         <section id="createOffer-section" className="section-cards">
             <h2 className="section-headings">Create Offer</h2>
             <form id="createOffer-form" className="forms" onSubmit={handleFormSubmit}>
-                <label htmlFor="palletQty">Pallet Quantity:</label>
+                <label className="forms-labels" htmlFor="palletQty">Pallet Quantity:</label>
                 <input 
                     className="form-inputs"
                     name="palletQty"
@@ -129,7 +129,7 @@ const CreateOfferForm = () => {
                     value={palletQty}
                     onChange={handleChange}
                 />
-                <label htmlFor="price">Price:</label>
+                <label className="forms-labels" htmlFor="price">Price:</label>
                 <input 
                     className="form-inputs"
                     name="price"
@@ -137,19 +137,19 @@ const CreateOfferForm = () => {
                     value={price}
                     onChange={handleChange}
                 />
-                <label htmlFor="material">Material:</label>
+                <label className="forms-labels" htmlFor="material">Material:</label>
                 <select className="form-selects" name="material" defaultValue="" onChange={handleChange}>
                     <option value=""></option>
                     <option value="HDPE">HDPE</option>
                     <option value="PP">PP</option>
                 </select>
-                <label htmlFor="dimension">Dimension:</label>
+                <label className="forms-labels" htmlFor="dimension">Dimension:</label>
                 <select className="form-selects" name="dimension" defaultValue="" onChange={handleChange}>
                     <option value=""></option>
                     <option value='48" x 40"'>48" x 40"</option>
                     <option value='48" x 48"'>48" x 48"</option>
                 </select>
-                <label htmlFor="address">Address:</label>
+                <label className="forms-labels" htmlFor="address">Address:</label>
                 <input 
                     className="form-inputs"
                     name="address"
@@ -157,7 +157,7 @@ const CreateOfferForm = () => {
                     value={address}
                     onChange={handleChange}
                 />
-                <label htmlFor="state">State:</label>
+                <label className="forms-labels" htmlFor="state">State:</label>
                 <select className="form-selects" name="state" defaultValue="" onChange={handleChange}>
                     <option value=""></option>
                     <option value="Aguascalientes">Aguascalientes</option>
@@ -193,7 +193,7 @@ const CreateOfferForm = () => {
                     <option value="Yucatán">Yucatán</option>
                     <option value="Zacatecas">Zacatecas</option>
                 </select>
-                <label htmlFor="image">Image:</label>
+                <label className="forms-labels" htmlFor="image">Image:</label>
                 <input 
                     className="form-inputs"
                     name="image"
@@ -204,7 +204,7 @@ const CreateOfferForm = () => {
                 {requiredField && (
                     <p className="required-fields">{requiredField}</p>
                 )}
-                <div>
+                <div className="forms-btn-div">
                     <button className="btns" type="submit">Create Offer</button>
                 </div>
             </form>

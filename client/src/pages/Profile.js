@@ -21,11 +21,11 @@ const Profile = () => {
         <section id="profile-section" className="section-cards">
             <h2 className="section-headings">User Information</h2>
             <ul>
-                <li>Name: {`${userData.firstName} ${userData.lastName}`}</li>
-                <li>Company: {`${userData.company}`}</li>
-                <li>Username: {`${userData.username}`}</li>
-                <li>Email: {`${userData.email}`}</li>
-                <li>User Type: {`${userData.userType}`}</li>
+                <li className="cards-list-items">Name: {`${userData.firstName} ${userData.lastName}`}</li>
+                <li className="cards-list-items">Company: {`${userData.company}`}</li>
+                <li className="cards-list-items">Username: {`${userData.username}`}</li>
+                <li className="cards-list-items">Email: {`${userData.email}`}</li>
+                <li className="cards-list-items">User Type: {`${userData.userType}`}</li>
             </ul>
         </section>
     );

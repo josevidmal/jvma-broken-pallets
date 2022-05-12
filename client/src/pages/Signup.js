@@ -72,7 +72,7 @@ const Signup = () => {
         <section id="signup-section" className="section-cards">
             <h2 className="section-headings">Sign Up</h2>
             <form id="signup-form" className="forms" onSubmit={handleFormSubmit}>
-                <label htmlFor="firstName">First Name:</label>
+                <label className="forms-labels" htmlFor="firstName">First Name:</label>
                 <input 
                     className="form-inputs"
                     name="firstName"
@@ -80,7 +80,7 @@ const Signup = () => {
                     value={formState.firstName}
                     onChange={handleChange}
                 />
-                <label htmlFor="lastName">Last Name:</label>
+                <label className="forms-labels" htmlFor="lastName">Last Name:</label>
                 <input 
                     className="form-inputs"
                     name="lastName"
@@ -88,7 +88,7 @@ const Signup = () => {
                     value={formState.lastName}
                     onChange={handleChange}
                 />
-                <label htmlFor="company">Company:</label>
+                <label className="forms-labels" htmlFor="company">Company:</label>
                 <input 
                     className="form-inputs"
                     name="company"
@@ -96,7 +96,7 @@ const Signup = () => {
                     value={formState.company}
                     onChange={handleChange}
                 />
-                <label htmlFor="username">Username:</label>
+                <label className="forms-labels" htmlFor="username">Username:</label>
                 <input 
                     className="form-inputs"
                     name="username"
@@ -104,7 +104,7 @@ const Signup = () => {
                     value={formState.username}
                     onChange={handleChange}
                 />
-                <label htmlFor="email">Email:</label>
+                <label className="forms-labels" htmlFor="email">Email:</label>
                 <input 
                     className="form-inputs"
                     name="email"
@@ -112,7 +112,7 @@ const Signup = () => {
                     value={formState.email}
                     onChange={handleChange}
                 />
-                <label htmlFor="password">Password:</label>
+                <label className="forms-labels" htmlFor="password">Password:</label>
                 <input 
                     className="form-inputs"
                     name="password"
@@ -120,7 +120,7 @@ const Signup = () => {
                     value={formState.password}
                     onChange={handleChange}
                 />
-                <label htmlFor="userType">User Type:</label>
+                <label className="forms-labels" htmlFor="userType">User Type:</label>
                 <select className="form-selects" name="userType" defaultValue="" onChange={handleChange}>
                     <option value=""></option>
                     <option value="Seller">Seller</option>
@@ -129,7 +129,7 @@ const Signup = () => {
                 {requiredField && (
                     <p className="required-fields">{requiredField}</p>
                 )}
-                <div>
+                <div className="forms-btn-div">
                     <button className="btns" type="submit">Submit</button>
                 </div>
             </form>

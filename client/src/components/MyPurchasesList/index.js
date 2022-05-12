@@ -44,26 +44,26 @@ const MyPurchasesList = () => {
     }
 
     return (
-        <section id="myPurchases-section" className="section-cards">
+        <section id="myPurchases-section">
             <h2 className="section-headings">My Purchases</h2>
             {me.myPurchases?.map((myPurchase) => {
                 return (
-                    <div className="section-cards" key={myPurchase._id}>
-                        <h4>Order ID: {myPurchase._id}</h4>
-                        <ul>
-                            <li>Seller: {myPurchase.seller}</li>
-                            <li>Email: {myPurchase.email}</li>
-                            <li>Pallets: {myPurchase.palletQty}</li>
-                            <li>Price: ${myPurchase.price} MXN</li>
-                            <li>Material: {myPurchase.material}</li>
-                            <li>Dimension: {myPurchase.dimension}</li>
-                            <li>Address: {myPurchase.address}</li>
-                            <li>State: {myPurchase.state}</li>
-                            <li>Status: {myPurchase.offerStatus}</li>
+                    <div className="section-cards offer-cards" key={myPurchase._id}>
+                        <h4 className="offer-ids">Order ID: {myPurchase._id}</h4>
+                        <ul className="offer-lists">
+                            <li className="cards-list-items">Seller: {myPurchase.seller}</li>
+                            <li className="cards-list-items">Email: {myPurchase.email}</li>
+                            <li className="cards-list-items">Pallets: {myPurchase.palletQty}</li>
+                            <li className="cards-list-items">Price: ${myPurchase.price} MXN</li>
+                            <li className="cards-list-items">Material: {myPurchase.material}</li>
+                            <li className="cards-list-items">Dimension: {myPurchase.dimension}</li>
+                            <li className="cards-list-items">Address: {myPurchase.address}</li>
+                            <li className="cards-list-items">State: {myPurchase.state}</li>
+                            <li className="cards-list-items">Status: {myPurchase.offerStatus}</li>
                         </ul>
-                        <img src={require(`../../assets/images/${myPurchase.image}`)} alt='damaged-pallets' />
-                        <div>
-                            <button className="btns" onClick={() => handleRemovePurchase(myPurchase._id)}>Remove Purchase</button>
+                        <img className="offer-img" src={require(`../../assets/images/${myPurchase.image}`)} alt='damaged-pallets' />
+                        <div className="offer-btn-div">
+                            <button id="remove-btn" className="btns delete-btns" onClick={() => handleRemovePurchase(myPurchase._id)}>Remove Purchase</button>
                         </div>
                     </div>
                 );

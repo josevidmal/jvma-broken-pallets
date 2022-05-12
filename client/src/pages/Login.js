@@ -52,7 +52,7 @@ const Login = () => {
         <section id="login-section" className="section-cards">
             <h2 className="section-headings">Login</h2>
             <form id="login-form" className="forms" onSubmit={handleFormSubmit}>
-                <label htmlFor="email">Email:</label>
+                <label className="forms-labels" htmlFor="email">Email:</label>
                 <input 
                     className="form-inputs"
                     name="email"
@@ -60,7 +60,7 @@ const Login = () => {
                     value={formState.email}
                     onChange={handleChange}
                 />
-                <label htmlFor="password">Password:</label>
+                <label className="forms-labels" htmlFor="password">Password:</label>
                 <input 
                     className="form-inputs"
                     name="password"
@@ -71,7 +71,7 @@ const Login = () => {
                 {requiredField && (
                     <p className="required-fields">{requiredField}</p>
                 )}
-                <div>
+                <div className="forms-btn-div">
                     <button className="btns" type="submit">Submit</button>
                 </div>
             </form>
