@@ -20,9 +20,9 @@ What I want to achieve with Broken Pallets is to help companies reduce the envir
 - So that I can find fast and in one place, damaged plastic pallets, to buy them at a residual price, obtaining plastic resources to recycle and generate raw material
 
 
-## Usage & [Deployed Application]()
+## Usage & [Deployed Application](https://jvma-broken-pallets.herokuapp.com/)
 
-This is the link to the deployed application: 
+This is the link to the deployed application: https://jvma-broken-pallets.herokuapp.com/
 
 The application looks like this:
 
