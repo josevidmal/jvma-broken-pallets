@@ -21,7 +21,27 @@ if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, '../client/build')));
 }
 
-app.get('/' || '/me' || '/me/myOffers' || '/me/myPurchases' || '/createOffer' || '/allOffers', (req, res) => {
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
+
+app.get('/me', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
+
+app.get('/me/myOffers', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
+
+app.get('/me/myPurchases', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
+
+app.get('/createOffer', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
+
+app.get('/allOffers', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
