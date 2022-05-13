@@ -63,7 +63,7 @@ const MyPurchasesList = () => {
                         </ul>
                         <img className="offer-img" src={require(`../../assets/images/${myPurchase.image}`)} alt='damaged-pallets' />
                         <div className="offer-btn-div">
-                            <button id="remove-btn" className="btns delete-btns" onClick={() => handleRemovePurchase(myPurchase._id)}>Remove</button>
+                            <button id="remove-btn" className="btns delete-btns" onClick={() => handleRemovePurchase(myPurchase._id)}>Remove Purchase</button>
                         </div>
                     </div>
                 );
