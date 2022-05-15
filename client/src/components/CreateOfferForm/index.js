@@ -178,7 +178,7 @@ const CreateOfferForm = () => {
                     <p className="required-fields">{requiredField}</p>
                 )}
                 <div className="forms-btn-div">
-                    <button className="btns" type="submit">Create Offer</button>
+                    <button id="createOffer-btn" className="btns" type="submit">Create Offer</button>
                 </div>
             </form>
             {error && (

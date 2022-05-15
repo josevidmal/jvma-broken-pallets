@@ -48,17 +48,17 @@ const MyPurchasesList = () => {
             <h2 className="section-headings">My Purchases</h2>
             {me.myPurchases?.map((myPurchase) => (
                     <div className="section-cards offer-cards" key={myPurchase._id}>
-                        <h4 className="offer-ids">Order ID: {myPurchase._id}</h4>
+                        <h4 className="offer-ids">Order ID: <span className="cards-spans">{myPurchase._id}</span></h4>
                         <ul className="offer-lists">
-                            <li className="cards-list-items">Seller: {myPurchase.seller}</li>
-                            <li className="cards-list-items">Email: <a href={`mailto:${myPurchase.email}`}>{myPurchase.email}</a></li>
-                            <li className="cards-list-items">Pallets: {myPurchase.palletQty}</li>
-                            <li className="cards-list-items">Price: ${myPurchase.price} MXN</li>
-                            <li className="cards-list-items">Material: {myPurchase.material}</li>
-                            <li className="cards-list-items">Dimension: {myPurchase.dimension}</li>
-                            <li className="cards-list-items">Address: {myPurchase.address}</li>
-                            <li className="cards-list-items">State: {myPurchase.state}</li>
-                            {myPurchase.offerStatus === 'Active' ? (<li className="cards-list-items">Status: Active</li>) : (<li className="cards-list-items">Status: Purchased By <a href={`mailto:${myPurchase.offerStatus}`}>{myPurchase.offerStatus}</a></li>)}
+                            <li className="cards-list-items">Seller: <span className="cards-spans">{myPurchase.seller}</span></li>
+                            <li className="cards-list-items">Email: <span className="cards-spans"><a className="mail-links" href={`mailto:${myPurchase.email}`}>{myPurchase.email}</a></span></li>
+                            <li className="cards-list-items">Pallets: <span className="cards-spans">{myPurchase.palletQty}</span></li>
+                            <li className="cards-list-items">Price: <span className="cards-spans">${myPurchase.price.toLocaleString('en-US')} MXN</span></li>
+                            <li className="cards-list-items">Material: <span className="cards-spans">{myPurchase.material}</span></li>
+                            <li className="cards-list-items">Dimension: <span className="cards-spans">{myPurchase.dimension}</span></li>
+                            <li className="cards-list-items">Address: <span className="cards-spans">{myPurchase.address}</span></li>
+                            <li className="cards-list-items">State: <span className="cards-spans">{myPurchase.state}</span></li>
+                            {myPurchase.offerStatus === 'Active' ? (<li className="cards-list-items">Status: <span className="cards-spans">Active</span></li>) : (<li className="cards-list-items">Status: <span className="cards-spans">Purchased By {myPurchase.offerStatus}</span></li>)}
                         </ul>
                         <img className="offer-img" src={require(`../../assets/images/${myPurchase.image}`)} alt='damaged-pallets' />
                         <div className="offer-btn-div">

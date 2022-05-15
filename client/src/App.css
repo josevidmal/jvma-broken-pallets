@@ -8,7 +8,7 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     position: relative;
-    opacity: 0.9;
+    opacity: 1.0;
 }
 
 header h1 {
@@ -83,7 +83,7 @@ nav ul {
 
 .section-cards {
     background-color: white;
-    padding: 4% 4%;
+    padding: 1% 4%;
     border-radius: 10px;
     box-shadow: 5px 5px 15px gray;
     margin: 20px 0px;
@@ -143,6 +143,11 @@ nav ul {
     margin: 5px 0px;
 }
 
+.sold-text {
+    margin: 5px 0px;
+    padding: 5px 0px;
+}
+
 .delete-btns {
     background-color: rgb(206, 0, 0);
 }
@@ -163,7 +168,7 @@ nav ul {
 .offer-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-content: space-around;
     align-items: center;
 }
@@ -174,14 +179,20 @@ nav ul {
 }
 
 .offer-img {
-    width: 100%;
-    height: 250px;
+    flex-basis: 65%;
+    width: 70px;
+    height: 170px;
     border-radius: 10px;
 }
 
 .cards-list-items {
-    margin: 10px 0px;
+    margin: 0px 0px;
     font-size: 14px;
+}
+
+.cards-spans, .mail-links {
+    font-family: 'kanit';
+    text-decoration: none;
 }
 
 footer {
@@ -259,6 +270,10 @@ footer ul li {
         font-size: 18px;
     }
 
+    .offer-cards {
+        justify-content: space-between;
+    }
+
     .offer-ids {
         font-size: 20px;
     }
@@ -314,6 +329,7 @@ footer ul li {
 
     .section-headings {
         font-size: 40px;
+        text-align: left;
     }
 
     .forms-labels {
@@ -321,12 +337,79 @@ footer ul li {
     }
 
     .form-inputs, .form-selects {
-        height: 30px;;
+        height: 30px;
+        width: 45%;
+        display: block;
+    }
+
+    .forms-btn-div {
+        text-align: left;
     }
 
     .btns {
         width: 35%;
         font-size: 23px;
+    }
+
+    #login-btn, #signup-btn {
+        margin: 10px 0px;
+        width: 12.5%;
+        font-size: 20px;
+    }
+
+    #login-section, #signup-section, #createOffer-section {
+        z-index: 1;
+        position: relative;
+    }
+
+    #login-section::after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        background-image: url("./assets/images/Circular-economy-2.jpeg");
+        background-position: center;
+        background-size: 100% 100%;
+        border-radius: 0px 10px 10px 0px;
+        opacity: 0.9;
+        z-index: 2;
+    }
+
+    #signup-section {
+        z-index: 1;
+        position: relative;
+    }
+
+    #signup-section::after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        background-image: url("./assets/images/think-about-plastic.png");
+        background-position: center;
+        background-size: 100% 100%;
+        border-radius: 0px 10px 10px 0px;
+        opacity: 1.0;
+        z-index: 2;
+    }
+
+    #createOffer-section::after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        background-image: url("./assets/images/make-offer.webp");
+        background-position: center;
+        background-size: 100% 80%;
+        border-radius: 0px 10px 10px 0px;
+        opacity: 1.0;
+        z-index: 2;
     }
 
     .cards-list-items {
@@ -339,17 +422,18 @@ footer ul li {
     }
 
     .offer-ids {
-        font-size: 23px;
+        font-size: 20px;
+        text-align: center;
     }
 
     .offer-lists {
-        flex-basis: 40%;
+        flex-basis: 55%;
     }
 
     .offer-img {
-        flex-basis: 40%;
+        flex-basis: 30%;
         width: 200px;
-        height: 270px;
+        height: 230px;
     }
 
     footer h4 {
@@ -395,6 +479,10 @@ footer ul li {
         font-size: 16px;
     }
 
+    .section-cards {
+        padding: 4% 4%;
+    }
+
     .section-headings {
         flex-basis: 100%;
         font-size: 40px;
@@ -408,7 +496,7 @@ footer ul li {
 
     .form-inputs, .form-selects {
         display: block;
-        width: 50%;
+        width: 45%;
         height: 35px;;
     }
 
@@ -419,6 +507,67 @@ footer ul li {
     .btns {
         width: 35%;
         font-size: 23px;
+    }
+
+    #login-btn, #signup-btn {
+        margin: 10px 0px;
+        width: 12.5%;
+        font-size: 20px;
+    }
+
+    #login-section, #signup-section, #createOffer-section {
+        z-index: 1;
+        position: relative;
+    }
+
+    #login-section::after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        background-image: url("./assets/images/Circular-economy-2.jpeg");
+        background-position: center;
+        background-size: 100% 100%;
+        border-radius: 0px 10px 10px 0px;
+        opacity: 0.9;
+        z-index: 2;
+    }
+
+    #signup-section {
+        z-index: 1;
+        position: relative;
+    }
+
+    #signup-section::after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        background-image: url("./assets/images/think-about-plastic.png");
+        background-position: center;
+        background-size: 100% 100%;
+        border-radius: 0px 10px 10px 0px;
+        opacity: 1.0;
+        z-index: 2;
+    }
+
+    #createOffer-section::after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        background-image: url("./assets/images/make-offer.webp");
+        background-position: center;
+        background-size: 100% 80%;
+        border-radius: 0px 10px 10px 0px;
+        opacity: 1.0;
+        z-index: 2;
     }
 
     .cards-list-items {
@@ -537,7 +686,7 @@ footer ul li {
         font-size: 20px;
     }
 
-    #login-section, #signup-section {
+    #login-section, #signup-section, #createOffer-section {
         z-index: 1;
         position: relative;
     }
@@ -557,11 +706,6 @@ footer ul li {
         z-index: 2;
     }
 
-    #signup-section {
-        z-index: 1;
-        position: relative;
-    }
-
     #signup-section::after {
         content: " ";
         position: absolute;
@@ -572,6 +716,21 @@ footer ul li {
         background-image: url("./assets/images/think-about-plastic.png");
         background-position: center;
         background-size: 100% 100%;
+        border-radius: 0px 10px 10px 0px;
+        opacity: 1.0;
+        z-index: 2;
+    }
+
+    #createOffer-section::after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        background-image: url("./assets/images/make-offer.webp");
+        background-position: center;
+        background-size: 100% 80%;
         border-radius: 0px 10px 10px 0px;
         opacity: 1.0;
         z-index: 2;
@@ -686,13 +845,13 @@ footer ul li {
         font-size: 20px;
     }
 
-    #login-btn, #signup-btn {
+    #login-btn, #signup-btn, #createOffer-btn {
         margin: 10px 0px;
         width: 12.5%;
         font-size: 20px;
     }
 
-    #login-section, #signup-section {
+    #login-section, #signup-section, #createOffer-section {
         z-index: 1;
         position: relative;
     }
@@ -727,8 +886,23 @@ footer ul li {
         z-index: 2;
     }
 
+    #createOffer-section::after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        background-image: url("./assets/images/make-offer.webp");
+        background-position: center;
+        background-size: 100% 80%;
+        border-radius: 0px 10px 10px 0px;
+        opacity: 1.0;
+        z-index: 2;
+    }
+
     .cards-list-items {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .offers-sections {
@@ -742,12 +916,12 @@ footer ul li {
         flex-basis: 49%;
         justify-content: space-between;
         align-items: center;
-        padding: 2% 2%;
+        padding: 0% 2%;
     }
 
     .offer-ids {
         text-align: center;
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .offer-lists {
