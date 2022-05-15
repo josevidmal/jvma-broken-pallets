@@ -1,12 +1,14 @@
 header {
     width: 100%;
     height: 200px;
-    background-image: url("./assets/images/recycled-plastic-pallets.png");
+    background-image: url("./assets/images/Used-Pallets-Used-Pallet-Product-Page-scaled.jpeg");
     background-position: center;
     background-size: cover;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    position: relative;
+    opacity: 0.9;
 }
 
 header h1 {
@@ -16,9 +18,13 @@ header h1 {
     text-align: center;
     background-color: white;
     border-radius: 0px 0px 10px 10px;
+    border: solid 5px lightgreen;
+    border-top: none;
     font-family: 'Bungee Shade', 'Black Ops One', 'Russo One', 'Kanit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
     padding: 5px 5px;
+    z-index: 2;
+    box-shadow: 0px 5px 20px black;
 }
 
 li {
@@ -28,7 +34,9 @@ li {
 nav {
     flex-basis: 100%;
     align-self: flex-end;
-    background-color: lightgreen;
+    background-image: linear-gradient(to bottom, rgb(203, 240, 203), lightgreen);
+    border-bottom: solid 3px black;
+    z-index: 2;
 }
 
 nav ul {
@@ -48,7 +56,7 @@ nav ul {
 
 .seller-nav-li, .recycler-nav-li {
     display: inline;
-    flex-basis: 40%;
+    flex-basis: 43%;
     margin: 5px 10px;
     text-align: center;
 }
@@ -67,7 +75,7 @@ nav ul {
 }
 
 .main-container {
-    background-image: url("./assets/images/light-green-background.webp");
+    background-color: white;
     background-position: center;
     background-size: cover;
     padding: 35px 15px;
@@ -109,10 +117,10 @@ nav ul {
 
 .form-inputs, .form-selects {
     width: 100%;
-    padding: 1px 5px;
+    padding: 1px 8px;
     border: 2px solid black;
     border-radius: 5px;
-    font-family: monospace;
+    font-family: 'kanit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 5px 0px;
 }
 
@@ -155,8 +163,9 @@ nav ul {
 .offer-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-content: space-around;
+    align-items: center;
 }
 
 .offer-ids, .offer-lists, .offer-img, .offer-btn-div {
@@ -176,11 +185,12 @@ nav ul {
 }
 
 footer {
-    background-color: black;
-    color: white;
+    background-image: linear-gradient(to bottom, rgb(203, 240, 203), lightgreen);
+    color: black;
     text-align: center;
     font-size: 14px;
     padding: 5px 5px;
+    border-top: solid 3px black;
 }
 
 footer h4 {
@@ -195,11 +205,11 @@ footer ul li {
 
 .footer-links {
     display: inline;
-    color: white;
+    color: black;
 }
 
 .footer-links:hover {
-    color: lightgreen
+    color: rgb(66, 66, 255)
 }
 
 @media screen and (min-width: 576px) {
@@ -209,8 +219,8 @@ footer ul li {
     }
 
     header h1 {
-        flex-basis: 65%;
-        height: 45px;
+        flex-basis: 70%;
+        height: 50px;
         font-size: 30px;
     }
 
@@ -220,7 +230,7 @@ footer ul li {
     }
     
     .seller-nav-li, .recycler-nav-li {
-        flex-basis: 30%;
+        flex-basis: 35%;
         font-size: 20px;
     }
 
@@ -253,8 +263,14 @@ footer ul li {
         font-size: 20px;
     }
 
+    .offer-lists {
+        flex-basis: 55%;
+    }
+
     .offer-img {
-        height: 350px;
+        flex-basis: 40%;
+        width: 200px;
+        height: 200px;
     }
 
     footer h4 {
@@ -274,7 +290,7 @@ footer ul li {
 
     header h1 {
         flex-basis: 70%;
-        height: 60px;
+        height: 65px;
         font-size: 40px;
     }
 
@@ -357,7 +373,7 @@ footer ul li {
 
     header h1 {
         flex-basis: 53%;
-        height: 60px;
+        height: 65px;
         font-size: 40px;
     }
 
@@ -380,6 +396,7 @@ footer ul li {
     }
 
     .section-headings {
+        flex-basis: 100%;
         font-size: 40px;
         text-align: left;
         margin: 5px 0px;
@@ -405,27 +422,35 @@ footer ul li {
     }
 
     .cards-list-items {
-        font-size: 16px;
+        font-size: 12px;
+    }
+
+    .offers-sections {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-around;
     }
 
     .offer-cards {
+        flex-basis: 49%;
         justify-content: space-between;
         align-items: center;
     }
 
     .offer-ids {
         text-align: center;
-        font-size: 23px;
+        font-size: 18px;
     }
 
     .offer-lists {
-        flex-basis: 40%;
+        flex-basis: 65%;
     }
 
     .offer-img {
-        flex-basis: 40%;
-        width: 200px;
-        height: 270px;
+        flex-basis: 10%;
+        width: 120px;
+        height: 150px;
     }
 
     footer h4 {
@@ -449,7 +474,7 @@ footer ul li {
 
     header h1 {
         flex-basis: 53%;
-        height: 70px;
+        height: 75px;
         font-size: 50px;
     }
 
@@ -480,6 +505,7 @@ footer ul li {
     }
 
     .section-headings {
+        flex-basis: 100%;
         font-size: 50px;
         text-align: left;
         margin: 5px 0px;
@@ -491,7 +517,7 @@ footer ul li {
 
     .form-inputs, .form-selects {
         display: block;
-        width: 50%;
+        width: 45%;
         height: 38px;;
     }
 
@@ -500,32 +526,87 @@ footer ul li {
     }
 
     .btns {
-        width: 30%;
+        margin: 10px 0px;
+        width: 25%;
         font-size: 25px;
     }
 
-    .cards-list-items {
+    #login-btn, #signup-btn {
+        margin: 10px 0px;
+        width: 12.5%;
         font-size: 20px;
     }
 
+    #login-section, #signup-section {
+        z-index: 1;
+        position: relative;
+    }
+
+    #login-section::after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        background-image: url("./assets/images/Circular-economy-2.jpeg");
+        background-position: center;
+        background-size: 100% 100%;
+        border-radius: 0px 10px 10px 0px;
+        opacity: 0.9;
+        z-index: 2;
+    }
+
+    #signup-section {
+        z-index: 1;
+        position: relative;
+    }
+
+    #signup-section::after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        background-image: url("./assets/images/think-about-plastic.png");
+        background-position: center;
+        background-size: 100% 100%;
+        border-radius: 0px 10px 10px 0px;
+        opacity: 1.0;
+        z-index: 2;
+    }
+
+    .cards-list-items {
+        font-size: 16px;
+    }
+
+    .offers-sections {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-around;
+    }
+
     .offer-cards {
+        flex-basis: 49%;
         justify-content: space-between;
         align-items: center;
     }
 
     .offer-ids {
         text-align: center;
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .offer-lists {
-        flex-basis: 40%;
+        flex-basis: 50%;
     }
 
     .offer-img {
-        flex-basis: 35%;
-        width: 200px;
-        height: 270px;
+        flex-basis: 30%;
+        width: 180px;
+        height: 230px;
     }
 
     footer h4 {
@@ -538,63 +619,61 @@ footer ul li {
 }
 
 @media screen and (min-width: 1400px) {
-
-    .main-container {
-        padding: 35px 60px;
-    }
     
     header {
-        height: 220px;
+        height: 170px;
     }
 
     header h1 {
-        flex-basis: 45%;
-        height: 75px;
-        font-size: 50px;
+        flex-basis: 36%;
+        height: 65px;
+        font-size: 40px;
     }
 
     .home-nav-li {
         flex-basis: 30%;
-        font-size: 22px;
+        font-size: 18px;
     }
     
     .seller-nav-li, .recycler-nav-li {
         flex-basis: 20%;
-        font-size: 22px;
+        font-size: 18px;
     }
 
     #about-section {
-        justify-content: space-between;
+        justify-content: space-around;
         align-content: space-between;
         align-items: center;
+        padding: 1% 1%;
     }
 
     #home-image {
-        height: 400px;
-        flex-basis: 35%;
+        height: 350px;
+        flex-basis: 45%;
     }
 
     #about-section p {
-        flex-basis: 40%;
-        font-size: 20px;
+        flex-basis: 30%;
+        font-size: 16px;
         line-height: 1.5;
     }
 
     .section-headings {
-        font-size: 50px;
+        flex-basis: 100%;
+        font-size: 40px;
         text-align: left;
         margin: 5px 0px;
     }
 
     .forms-labels {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .form-inputs, .form-selects {
         display: block;
-        width: 50%;
+        width: 45%;
         height: 38px;
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .forms-btn-div {
@@ -602,17 +681,68 @@ footer ul li {
     }
 
     .btns {
-        width: 30%;
-        font-size: 25px;
+        margin: 10px 0px;
+        width: 35%;
+        font-size: 20px;
+    }
+
+    #login-btn, #signup-btn {
+        margin: 10px 0px;
+        width: 12.5%;
+        font-size: 20px;
+    }
+
+    #login-section, #signup-section {
+        z-index: 1;
+        position: relative;
+    }
+
+    #login-section::after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        background-image: url("./assets/images/Circular-economy-2.jpeg");
+        background-position: center;
+        background-size: 100% 100%;
+        border-radius: 0px 10px 10px 0px;
+        opacity: 0.9;
+        z-index: 2;
+    }
+
+    #signup-section::after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        background-image: url("./assets/images/think-about-plastic.png");
+        background-position: center;
+        background-size: 100% 100%;
+        border-radius: 0px 10px 10px 0px;
+        opacity: 1.0;
+        z-index: 2;
     }
 
     .cards-list-items {
         font-size: 20px;
     }
 
+    .offers-sections {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-around;
+    }
+
     .offer-cards {
+        flex-basis: 49%;
         justify-content: space-between;
         align-items: center;
+        padding: 2% 2%;
     }
 
     .offer-ids {
@@ -621,20 +751,20 @@ footer ul li {
     }
 
     .offer-lists {
-        flex-basis: 40%;
+        flex-basis: 60%;
     }
 
     .offer-img {
         flex-basis: 35%;
         width: 200px;
-        height: 270px;
+        height: 200px;
     }
 
     footer h4 {
-        font-size: 20px;
+        font-size: 18px;
     }
     
     footer ul li {
-        font-size: 50px;
+        font-size: 45px;
     }
 }

@@ -4,3 +4,7 @@
     padding: 0px;
     font-family: 'Russo One', 'Kanit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+body {
+    background-color: lightgreen;
+}

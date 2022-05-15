@@ -84,6 +84,11 @@ const resolvers = {
                     { $addToSet: { myPurchases: purchase._id } }
                 );
 
+                await Offer.findOneAndUpdate(
+                    { _id: offerId },
+                    { offerStatus: context.user.email }
+                )
+
                 return User.findOne({ _id: context.user._id }).populate('myPurchases')
             }
             throw new AuthenticationError('You need to be logged in!');
@@ -112,11 +117,16 @@ const resolvers = {
                 const purchase = await Offer.findOne({
                     _id: offerId,
                 });
-                
+
                 await User.findOneAndUpdate(
                     { _id: context.user._id },
                     { $pull: { myPurchases: purchase._id } },
                 );
+
+                await Offer.findOneAndUpdate(
+                    { _id: offerId },
+                    { offerStatus: 'Active' }
+                )
 
                 return User.findOne({ _id: context.user._id }).populate('myPurchases')
             }

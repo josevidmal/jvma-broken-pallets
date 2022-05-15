@@ -41,7 +41,7 @@ const AllOffersList = () => {
     }
 
     return (
-        <section id="allOffers-section">
+        <section id="allOffers-section" className="offers-sections">
             <h2 className="section-headings">All Offers</h2>
             {offers.map((offer) => (
                 <div className="section-cards offer-cards" key={offer._id}>
@@ -55,12 +55,12 @@ const AllOffersList = () => {
                         <li className="cards-list-items">Dimension: {offer.dimension}</li>
                         <li className="cards-list-items">Address: {offer.address}</li>
                         <li className="cards-list-items">State: {offer.state}</li>
-                        <li className="cards-list-items">Status: {offer.offerStatus}</li>
+                        {offer.offerStatus === 'Active' ? (<li className="cards-list-items">Status: Active</li>) : (<li className="cards-list-items">Status: Purchased</li>)}
                         <li className="cards-list-items">Date Created: {offer.dateCreated}</li>
                     </ul>
                     <img className="offer-img" src={require(`../../assets/images/${offer.image}`)} alt='damaged-plastic-pallets'/>
                     <div className="offer-btn-div">
-                        <button id="buy-btn" className="btns" onClick={() => handleSaveOffer(offer._id)}>Buy</button>
+                        {offer.offerStatus === 'Active' ? (<button id="buy-btn" className="btns" onClick={() => handleSaveOffer(offer._id)}>Buy</button>) : (<h2 style={{color: "red"}}>Sold Out!</h2>)}
                     </div>
                     {error && (
                         <p className="error-messages">{error.message}</p>

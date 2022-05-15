@@ -44,10 +44,9 @@ const MyPurchasesList = () => {
     }
 
     return (
-        <section id="myPurchases-section">
+        <section id="myPurchases-section" className="offers-sections">
             <h2 className="section-headings">My Purchases</h2>
-            {me.myPurchases?.map((myPurchase) => {
-                return (
+            {me.myPurchases?.map((myPurchase) => (
                     <div className="section-cards offer-cards" key={myPurchase._id}>
                         <h4 className="offer-ids">Order ID: {myPurchase._id}</h4>
                         <ul className="offer-lists">
@@ -59,15 +58,14 @@ const MyPurchasesList = () => {
                             <li className="cards-list-items">Dimension: {myPurchase.dimension}</li>
                             <li className="cards-list-items">Address: {myPurchase.address}</li>
                             <li className="cards-list-items">State: {myPurchase.state}</li>
-                            <li className="cards-list-items">Status: {myPurchase.offerStatus}</li>
+                            {myPurchase.offerStatus === 'Active' ? (<li className="cards-list-items">Status: Active</li>) : (<li className="cards-list-items">Status: Purchased By <a href={`mailto:${myPurchase.offerStatus}`}>{myPurchase.offerStatus}</a></li>)}
                         </ul>
                         <img className="offer-img" src={require(`../../assets/images/${myPurchase.image}`)} alt='damaged-pallets' />
                         <div className="offer-btn-div">
-                            <button id="remove-btn" className="btns delete-btns" onClick={() => handleRemovePurchase(myPurchase._id)}>Remove Purchase</button>
+                            <button id="remove-btn" className="btns delete-btns" onClick={() => handleRemovePurchase(myPurchase._id)}>Remove</button>
                         </div>
                     </div>
-                );
-            })}
+            ))}
         </section>
     );
 };

@@ -72,7 +72,7 @@ const Login = () => {
                     <p className="required-fields">{requiredField}</p>
                 )}
                 <div className="forms-btn-div">
-                    <button className="btns" type="submit">Submit</button>
+                    <button id="login-btn" className="btns" type="submit">Submit</button>
                 </div>
             </form>
             {error && (

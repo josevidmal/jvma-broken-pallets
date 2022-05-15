@@ -10,7 +10,7 @@ const CreateOfferForm = () => {
     const [dimension, setDimension] = useState('');
     const [address, setAddress] = useState('');
     const [state, setState] = useState('');
-    const [image, setImage] = useState('default.jpeg');
+    const [image, setImage] = useState('');
 
     const [requiredField, setRequiredField] = useState('');
 
@@ -62,8 +62,8 @@ const CreateOfferForm = () => {
         } if (!state || state === '') {
             setRequiredField("Please select a State");
             return;
-        } if (!image || image === '') {
-            setImage('default.png')
+        } if (!image || image !== 'default.jpeg') {
+            setImage('default.jpeg')
         }
 
         try {
