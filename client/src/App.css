@@ -452,7 +452,7 @@ footer ul li {
     }
 
     header {
-        height: 200px;
+        height: 170px;
     }
 
     header h1 {
@@ -506,7 +506,7 @@ footer ul li {
 
     .btns {
         width: 35%;
-        font-size: 23px;
+        font-size: 20px;
     }
 
     #login-btn, #signup-btn {
@@ -585,6 +585,7 @@ footer ul li {
         flex-basis: 49%;
         justify-content: space-between;
         align-items: center;
+        padding: 0% 2%;
     }
 
     .offer-ids {
@@ -593,12 +594,12 @@ footer ul li {
     }
 
     .offer-lists {
-        flex-basis: 65%;
+        flex-basis: 60%;
     }
 
     .offer-img {
-        flex-basis: 10%;
-        width: 120px;
+        flex-basis: 35%;
+        width: 150px;
         height: 150px;
     }
 
@@ -618,50 +619,52 @@ footer ul li {
     }
     
     header {
-        height: 220px;
+        height: 170px;
     }
 
     header h1 {
-        flex-basis: 53%;
-        height: 75px;
-        font-size: 50px;
+        flex-basis: 43%;
+        height: 65px;
+        font-size: 40px;
     }
 
     .home-nav-li {
         flex-basis: 30%;
-        font-size: 25px;
+        font-size: 18px;
     }
     
     .seller-nav-li, .recycler-nav-li {
         flex-basis: 20%;
-        font-size: 25px;
+        font-size: 18px;
     }
 
     #about-section {
-        justify-content: space-between;
+        justify-content: space-around;
         align-content: space-between;
         align-items: center;
+        padding: 1% 1%;
     }
 
     #home-image {
-        height: 400px;
-        flex-basis: 35%;
+        height: 350px;
+        flex-basis: 45%;
     }
 
     #about-section p {
         flex-basis: 35%;
-        font-size: 19px;
+        font-size: 16px;
+        line-height: 1.5;
     }
 
     .section-headings {
         flex-basis: 100%;
-        font-size: 50px;
+        font-size: 40px;
         text-align: left;
         margin: 5px 0px;
     }
 
     .forms-labels {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .form-inputs, .form-selects {
@@ -677,7 +680,7 @@ footer ul li {
     .btns {
         margin: 10px 0px;
         width: 25%;
-        font-size: 25px;
+        font-size: 20px;
     }
 
     #login-btn, #signup-btn {
@@ -751,6 +754,7 @@ footer ul li {
         flex-basis: 49%;
         justify-content: space-between;
         align-items: center;
+        padding: 0% 2%;
     }
 
     .offer-ids {
@@ -763,9 +767,9 @@ footer ul li {
     }
 
     .offer-img {
-        flex-basis: 30%;
+        flex-basis: 35%;
         width: 180px;
-        height: 230px;
+        height: 180px;
     }
 
     footer h4 {
@@ -784,7 +788,7 @@ footer ul li {
     }
 
     header h1 {
-        flex-basis: 36%;
+        flex-basis: 37%;
         height: 65px;
         font-size: 40px;
     }
