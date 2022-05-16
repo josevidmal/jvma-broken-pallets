@@ -62,8 +62,9 @@ const CreateOfferForm = () => {
         } if (!state || state === '') {
             setRequiredField("Please select a State");
             return;
-        } if (!image || image !== 'default.jpeg') {
-            setImage('default.jpeg')
+        } if (!image || image === '') {
+            setRequiredField("Please select a sample image for now");
+            return;
         }
 
         try {
@@ -166,14 +167,17 @@ const CreateOfferForm = () => {
                     <option value="Yucatán">Yucatán</option>
                     <option value="Zacatecas">Zacatecas</option>
                 </select>
-                <label className="forms-labels" htmlFor="image">Image:</label>
-                <input 
-                    className="form-inputs"
-                    name="image"
-                    type="text"
-                    value={image}
-                    onChange={handleChange}
-                />
+                <label className="forms-labels" htmlFor="image">Sample Image: <br></br><span className="cards-spans">(upload not available now, coming soon)</span></label>
+                <select className="form-selects" name="image" defaultValue="" onChange={handleChange}>
+                    <option value=""></option>
+                    <option value="default.jpeg">default.jpeg</option>
+                    <option value="damaged-pallets-1.jpeg">damaged-pallets-1.jpeg</option>
+                    <option value="damaged-pallets-2.jpeg">damaged-pallets-2.jpeg</option>
+                    <option value="damaged-pallets-3.jpeg">damaged-pallets-3.jpeg</option>
+                    <option value="damaged-pallets-4.jpeg">damaged-pallets-4.jpeg</option>
+                    <option value="damaged-pallets-5.jpeg">damaged-pallets-5.jpeg</option>
+                    <option value="damaged-pallets-6.jpeg">damaged-pallets-6.jpeg</option>
+                </select>
                 {requiredField && (
                     <p className="required-fields">{requiredField}</p>
                 )}
